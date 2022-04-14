@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InformationFragment">
+
+    <TextView
+        android:id="@+id/headerColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/header"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/headerColumn"
+        app:layout_constraintStart_toEndOf="@+id/headerColumn"
+        app:layout_constraintTop_toTopOf="@id/headerColumn"
+        tools:text="Заметка 1" />
+
+    <TextView
+        android:id="@+id/dateOfCreatedColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/date_of_creation"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerColumn" />
+
+    <TextView
+        android:id="@+id/dateOfCreatedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/dateOfCreatedColumn"
+        app:layout_constraintStart_toEndOf="@id/dateOfCreatedColumn"
+        app:layout_constraintTop_toTopOf="@id/dateOfCreatedColumn"
+        tools:text="14.04.2022" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
