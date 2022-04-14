@@ -1,12 +1,24 @@
 package ru.eababurin.notes;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
-import java.util.Date;
 
-public class Note {
+public class Note implements Parcelable {
 
+    public static final Creator<Note> CREATOR = new Creator<Note>() {
+        @Override
+        public Note createFromParcel(Parcel in) {
+            return new Note(in);
+        }
+
+        @Override
+        public Note[] newArray(int size) {
+            return new Note[size];
+        }
+    };
     private final static ArrayList<Note> notes = new ArrayList<>();
-
     private int id;
     private String dateOfCreation;
     private String header;
@@ -15,6 +27,9 @@ public class Note {
     public Note(String dateOfCreation) {
         this.dateOfCreation = dateOfCreation;
         notes.add(this);
+    }
+
+    private Note() {
     }
 
     public Note(int id, String dateOfCreation, String header, String content) {
@@ -26,13 +41,20 @@ public class Note {
         notes.add(this);
     }
 
+    protected Note(Parcel in) {
+        id = in.readInt();
+        dateOfCreation = in.readString();
+        header = in.readString();
+        content = in.readString();
+    }
+
     protected static Note getNoteById(int id) {
         for (Note note : notes) {
             if (note.getId() == id) {
                 return note;
             }
         }
-        return null;
+        return new Note();
     }
 
     public int getId() {
@@ -44,7 +66,7 @@ public class Note {
     }
 
     public String getDateOfCreation() {
-        return dateOfCreation;
+        return ((dateOfCreation != null) && (!dateOfCreation.equals(""))) ? dateOfCreation : "неизвестно";
     }
 
     public void setDateOfCreation(String dateOfCreation) {
@@ -65,5 +87,18 @@ public class Note {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(id);
+        parcel.writeString(dateOfCreation);
+        parcel.writeString(header);
+        parcel.writeString(content);
     }
 }

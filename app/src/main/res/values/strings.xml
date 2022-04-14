@@ -1,10 +1,14 @@
 <resources>
-    <string name="app_name">Notes</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="save_button">Save</string>
+    <string name="app_name">Заметки</string>
+    <string name="hello_blank_fragment">Тут скоро будут настройки</string>
+    <string name="save_button">Сохранить</string>
     <string name="header">Заголовок заметки</string>
     <string name="date_of_creation">Дата создания</string>
     <string name="content">Содержание заметки</string>
     <string name="data_saved">Данные сохранены</string>
+    <string name="info_button">Инфо</string>
+    <string name="remove_button">Удалить</string>
+    <string name="data_removed">Заметка удалена</string>
+    <string name="note_title">Название заметки:</string>
+    <string name="settings">Настройки</string>
 </resources>
