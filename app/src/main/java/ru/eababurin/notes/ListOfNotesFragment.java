@@ -2,11 +2,15 @@ package ru.eababurin.notes;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -47,6 +51,31 @@ public class ListOfNotesFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onCreateContextMenu(@NonNull ContextMenu menu,
+                                    @NonNull View v,
+                                    @Nullable ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+
+        MenuInflater inflater = getActivity().getMenuInflater();
+        inflater.inflate(R.menu.context_menu, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.action_context_open:
+                Toast.makeText(requireActivity(), "Открываем...", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.action_context_remove:
+                Toast.makeText(requireActivity(), R.string.data_removed, Toast.LENGTH_LONG).show();
+                return true;
+        }
+
+        return super.onContextItemSelected(item);
+    }
+
     private void initList(View view) {
         LinearLayout linearLayout = (LinearLayout) view;
 
@@ -60,6 +89,7 @@ public class ListOfNotesFragment extends Fragment {
             textView.setText(note.getId() + ". " + note.getHeader());
             textView.setTextSize(30);
             linearLayout.addView(textView);
+            registerForContextMenu(textView);
 
             textView.setOnClickListener(v -> {
                 currentNoteId = note.getId();

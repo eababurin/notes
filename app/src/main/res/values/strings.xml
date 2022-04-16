@@ -11,4 +11,21 @@
     <string name="data_removed">Заметка удалена</string>
     <string name="note_title">Название заметки:</string>
     <string name="settings">Настройки</string>
+    <string name="navigation_drower_open">Открыть</string>
+    <string name="navigation_drower_close">Закрыть</string>
+    <string name="drawer_item_all_notes">Все заметки</string>
+    <string name="drawer_group_favourites">Избранное</string>
+    <string name="drawer_item_other">Прочее</string>
+    <string name="drawer_item_settings">Настройки</string>
+    <string name="drawer_item_about">О программе</string>
+    <string name="drawer_item_exit">Выход</string>
+    <string name="users_avatar">Аватар пользователя</string>
+    <string name="username">Carl Johnson</string>
+    <string name="home_address">Groove Street in Ganton, Los Santos</string>
+    <string name="action_context_open">Открыть</string>
+    <string name="action_context_remove">Удалить</string>
+    <string name="action_search">Поиск</string>
+    <string name="action_select">Выбрать</string>
+    <string name="action_information">Информация</string>
+    <string name="action_remove">Удалить</string>
 </resources>
