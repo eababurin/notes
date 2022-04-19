@@ -15,6 +15,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import ru.eababurin.notes.R;
 import ru.eababurin.notes.ui.fragment.AboutFragment;
+import ru.eababurin.notes.ui.fragment.ExitDialogFragment;
 import ru.eababurin.notes.ui.fragment.ListFragment;
 import ru.eababurin.notes.ui.fragment.SettingsFragment;
 
@@ -98,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                         drawerLayout.close();
                         return true;
                     case R.id.action_drawer_exit:
-                        finish();
+                        exit();
                         return true;
                 }
                 return false;
@@ -127,5 +128,9 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.fragment_list_of_notes, new SettingsFragment())
                 .addToBackStack("")
                 .commit();
+    }
+
+    private void exit() {
+        new ExitDialogFragment().show(getSupportFragmentManager(), ExitDialogFragment.TAG);
     }
 }

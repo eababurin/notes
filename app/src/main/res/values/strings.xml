@@ -51,6 +51,18 @@
     <string name="home_address">Groove Street in Ganton, Los Santos</string>
     <string name="username">Carl Johnson</string>
 
+    <!-- Диалог при выходе -->
+    <string name="exit_dialog_title">Выход</string>
+    <string name="exit_dialog_message">Вы точно хотите выйти?</string>
+    <string name="exit_dialog_positive_button">Конечно да!</string>
+    <string name="exit_dialog_nevative_button">Нет</string>
+    <string name="exit_dialog_neutral_button">Могу остаться</string>
+
+    <string name="exit_dialog_toast_exit">До скорых встреч!</string>
+    <string name="exit_dialog_toast_stay">Правильный выбор...</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <!-- Прочие новые ресурсы -->
 
 </resources>
