@@ -15,6 +15,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import ru.eababurin.notes.R;
 import ru.eababurin.notes.engine.Memo;
 
@@ -64,6 +66,7 @@ public class AboutNoteFragment extends Fragment {
                         .beginTransaction()
                         .replace(R.id.fragment_list_of_notes, new ListFragment())
                         .commit();
+                Snackbar.make(getActivity().findViewById(R.id.about_content_text_view), R.string.snackbar_remove_description, Snackbar.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

@@ -60,9 +60,9 @@
 
     <string name="exit_dialog_toast_exit">До скорых встреч!</string>
     <string name="exit_dialog_toast_stay">Правильный выбор...</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- Snackbar при удалении -->
+    <string name="snackbar_remove_description">Заметка удалена.</string>
     <!-- Прочие новые ресурсы -->
 
 </resources>

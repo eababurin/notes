@@ -21,6 +21,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.Date;
 
 import ru.eababurin.notes.R;
@@ -63,7 +65,7 @@ public class ListFragment extends Fragment {
                 Toast.makeText(requireActivity(), R.string.toast_editing, Toast.LENGTH_LONG).show();
                 return true;
             case R.id.action_context_remove:
-                Toast.makeText(requireActivity(), R.string.data_removed, Toast.LENGTH_LONG).show();
+                Snackbar.make(getActivity().findViewById(R.id.textView), R.string.snackbar_remove_description, Snackbar.LENGTH_SHORT).show();
                 return true;
         }
         return super.onContextItemSelected(item);
