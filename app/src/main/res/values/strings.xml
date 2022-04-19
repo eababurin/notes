@@ -63,6 +63,11 @@
 
     <!-- Snackbar при удалении -->
     <string name="snackbar_remove_description">Заметка удалена.</string>
+
+    <!-- Notification при добавлении заметки (клике на FloatingButton) -->
+    <string name="notification_title">Поздравляем!</string>
+    <string name="notification_description">Тут нельзя добавлять заметки!</string>
+
     <!-- Прочие новые ресурсы -->
 
 </resources>

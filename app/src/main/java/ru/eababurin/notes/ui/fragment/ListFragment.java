@@ -1,7 +1,11 @@
 package ru.eababurin.notes.ui.fragment;
 
 import android.annotation.SuppressLint;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.ContextMenu;
@@ -16,7 +20,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -43,7 +50,34 @@ public class ListFragment extends Fragment {
         initializeToolbar();
         initializingListOfNotes(view);
 
-        view.findViewById(R.id.fab).setOnClickListener(v -> Toast.makeText(requireActivity(), R.string.fab_description, Toast.LENGTH_LONG).show());
+        view.findViewById(R.id.fab).setOnClickListener(v -> {
+            showNotification();
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                createNotificationChannel();
+            }
+        });
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private void createNotificationChannel() {
+        String name = "name";
+        String descriptionText = "Description";
+        int importance = NotificationManager.IMPORTANCE_DEFAULT;
+        NotificationChannel channel = new NotificationChannel("CHANNEL_ID", name, importance);
+        channel.setDescription(descriptionText);
+
+        NotificationManager notificationManager = (NotificationManager) getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.createNotificationChannel(channel);
+    }
+
+    private void showNotification() {
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(requireActivity(), "CHANNEL_ID");
+        builder.setSmallIcon(R.drawable.ic_launcher_foreground)
+                .setContentTitle(getResources().getString(R.string.notification_title))
+                .setContentText(getResources().getString(R.string.notification_description))
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+        NotificationManagerCompat.from(requireActivity()).notify(42, builder.build());
     }
 
     @Override
