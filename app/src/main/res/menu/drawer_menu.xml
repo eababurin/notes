@@ -3,22 +3,22 @@
     <item
         android:id="@+id/action_drawer_all_notes"
         android:title="@string/drawer_item_all_notes" />
-    <item android:title="@string/drawer_group_favourites">
-        <menu>
-            <item android:title="Заметка 1" />
-            <item android:title="Заметка 2" />
-        </menu>
-    </item>
 
     <item
         android:id="@+id/drawer_group_other"
         android:title="@string/drawer_item_other">
         <menu>
-            <item android:title="@string/drawer_item_settings" />
-            <item android:title="@string/drawer_item_about" />
+            <item
+                android:id="@+id/action_drawer_open_settings"
+                android:title="@string/drawer_item_settings" />
+            <item
+                android:id="@+id/action_drawer_about"
+                android:title="@string/drawer_item_about" />
         </menu>
     </item>
     <group android:id="@+id/drawer_group_exit">
-        <item android:title="@string/drawer_item_exit" />
+        <item
+            android:id="@+id/action_drawer_exit"
+            android:title="@string/drawer_item_exit" />
     </group>
 </menu>

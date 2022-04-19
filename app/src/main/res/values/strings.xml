@@ -1,31 +1,56 @@
 <resources>
     <string name="app_name">Заметки</string>
-    <string name="hello_blank_fragment">Тут скоро будут настройки</string>
-    <string name="save_button">Сохранить</string>
-    <string name="header">Заголовок заметки</string>
-    <string name="date_of_creation">Дата создания</string>
-    <string name="content">Содержание заметки</string>
-    <string name="data_saved">Данные сохранены</string>
-    <string name="info_button">Инфо</string>
-    <string name="remove_button">Удалить</string>
+
+    <!-- Общие действия -->
+    <string name="action_search_toast">Возможно тут будет поиск...</string>
     <string name="data_removed">Заметка удалена</string>
-    <string name="note_title">Название заметки:</string>
-    <string name="settings">Настройки</string>
-    <string name="navigation_drower_open">Открыть</string>
-    <string name="navigation_drower_close">Закрыть</string>
+    <string name="opening">Открываем...</string>
+    <string name="action_context_edit">Изменить</string>
+    <string name="action_edit">Изменить</string>
+
+    <!-- Фрагмент с настройками -->
+    <string name="settings_description">Тут скоро будут настройки</string>
+    <string name="settings_toolbar_title">Настройки</string>
+
+    <!-- Фрагмент с выбранной заметкой -->
+    <string name="note_not_selected">Заметка не выбрана</string>
+    <string name="content">Содержание заметки</string>
+    <string name="note_info_toolbar_title">Информация о заметке</string>
+
+    <!-- Фрагмент со списком заметок -->
+    <string name="notes_are_missing">Нет заметок.</string>
+    <string name="fab_description">Новая заметка</string>
+    <string name="toast_editing">Редактируем...</string>
+
+    <!-- Фрагмент "О программе" -->
+    <string name="about">Тут будет информация о программе</string>
+    <string name="about_toolbar_title">О программе</string>
+
+    <!-- Меню Navigation Drawer -->
     <string name="drawer_item_all_notes">Все заметки</string>
-    <string name="drawer_group_favourites">Избранное</string>
     <string name="drawer_item_other">Прочее</string>
     <string name="drawer_item_settings">Настройки</string>
     <string name="drawer_item_about">О программе</string>
     <string name="drawer_item_exit">Выход</string>
-    <string name="users_avatar">Аватар пользователя</string>
-    <string name="username">Carl Johnson</string>
-    <string name="home_address">Groove Street in Ganton, Los Santos</string>
-    <string name="action_context_open">Открыть</string>
-    <string name="action_context_remove">Удалить</string>
+
+    <string name="navigation_drower_open">Открыть</string>
+    <string name="navigation_drower_close">Закрыть</string>
+
+    <!-- Меню выбора опций -->
     <string name="action_search">Поиск</string>
     <string name="action_select">Выбрать</string>
     <string name="action_information">Информация</string>
     <string name="action_remove">Удалить</string>
+
+    <!-- Контекстное меню -->
+    <string name="action_context_open">Открыть</string>
+    <string name="action_context_remove">Удалить</string>
+
+    <!-- Информация о пользователе-->
+    <string name="users_avatar">Аватар пользователя</string>
+    <string name="home_address">Groove Street in Ganton, Los Santos</string>
+    <string name="username">Carl Johnson</string>
+
+    <!-- Прочие новые ресурсы -->
+
 </resources>

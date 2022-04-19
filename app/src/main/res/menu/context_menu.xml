@@ -5,6 +5,10 @@
         android:title="@string/action_context_open" />
 
     <item
+        android:id="@+id/action_context_edit"
+        android:title="@string/action_context_edit" />
+
+    <item
         android:id="@+id/action_context_remove"
         android:title="@string/action_context_remove" />
 </menu>
