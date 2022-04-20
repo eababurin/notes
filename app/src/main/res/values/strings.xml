@@ -68,6 +68,14 @@
     <string name="notification_title">Поздравляем!</string>
     <string name="notification_description">Тут нельзя добавлять заметки!</string>
 
+    <!-- AdditionalActivity -->
+    <string name="open_additional_activity">Открыть вторую Activity</string>
+    <string name="additional_activity">Дополнительная Activity</string>
+    <string name="bottom_sheet_dialog_fragment">Bottom Sheet Dialog Fragment</string>
+    <string name="bottom_sheet_dialog_button_ok">Ok!</string>
+    <string name="bottom_sheet_dialog_button_yes">Yes!</string>
+    <string name="toast_press_ok">Нажата ОК</string>
+    <string name="toast_press_yes">Нажата YES</string>
     <!-- Прочие новые ресурсы -->
 
 </resources>

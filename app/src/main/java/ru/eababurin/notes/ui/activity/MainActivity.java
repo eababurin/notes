@@ -1,8 +1,10 @@
 package ru.eababurin.notes.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -30,11 +32,18 @@ public class MainActivity extends AppCompatActivity {
 
         initializeToolbar();
         initializeDrawer();
+        initializeButton();
 
         if (savedInstanceState == null) getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragment_list_of_notes, new ListFragment())
                 .commit();
+    }
+
+    private void initializeButton() {
+        findViewById(R.id.open_additional_activity).setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, AdditionalActivity.class));
+        });
     }
 
     @Override
