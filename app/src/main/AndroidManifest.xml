@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Notes">
         <activity
+            android:name=".ui.activity.AdditionalActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.MainActivity"
             android:exported="true">
             <intent-filter>

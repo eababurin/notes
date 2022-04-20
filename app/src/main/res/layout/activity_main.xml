@@ -26,6 +26,14 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
+        <Button
+            android:id="@+id/open_additional_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/open_additional_activity"
+            android:layout_gravity="center" />
+
         <FrameLayout
             android:id="@+id/fragment_list_of_notes"
             android:layout_width="match_parent"

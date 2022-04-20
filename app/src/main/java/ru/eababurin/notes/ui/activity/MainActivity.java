@@ -1,8 +1,10 @@
 package ru.eababurin.notes.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -15,6 +17,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import ru.eababurin.notes.R;
 import ru.eababurin.notes.ui.fragment.AboutFragment;
+import ru.eababurin.notes.ui.fragment.ExitDialogFragment;
 import ru.eababurin.notes.ui.fragment.ListFragment;
 import ru.eababurin.notes.ui.fragment.SettingsFragment;
 
@@ -29,11 +32,18 @@ public class MainActivity extends AppCompatActivity {
 
         initializeToolbar();
         initializeDrawer();
+        initializeButton();
 
         if (savedInstanceState == null) getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragment_list_of_notes, new ListFragment())
                 .commit();
+    }
+
+    private void initializeButton() {
+        findViewById(R.id.open_additional_activity).setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, AdditionalActivity.class));
+        });
     }
 
     @Override
@@ -98,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                         drawerLayout.close();
                         return true;
                     case R.id.action_drawer_exit:
-                        finish();
+                        exit();
                         return true;
                 }
                 return false;
@@ -127,5 +137,9 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.fragment_list_of_notes, new SettingsFragment())
                 .addToBackStack("")
                 .commit();
+    }
+
+    private void exit() {
+        new ExitDialogFragment().show(getSupportFragmentManager(), ExitDialogFragment.TAG);
     }
 }

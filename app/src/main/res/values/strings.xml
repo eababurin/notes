@@ -51,6 +51,31 @@
     <string name="home_address">Groove Street in Ganton, Los Santos</string>
     <string name="username">Carl Johnson</string>
 
+    <!-- Диалог при выходе -->
+    <string name="exit_dialog_title">Выход</string>
+    <string name="exit_dialog_message">Вы точно хотите выйти?</string>
+    <string name="exit_dialog_positive_button">Конечно да!</string>
+    <string name="exit_dialog_nevative_button">Нет</string>
+    <string name="exit_dialog_neutral_button">Могу остаться</string>
+
+    <string name="exit_dialog_toast_exit">До скорых встреч!</string>
+    <string name="exit_dialog_toast_stay">Правильный выбор...</string>
+
+    <!-- Snackbar при удалении -->
+    <string name="snackbar_remove_description">Заметка удалена.</string>
+
+    <!-- Notification при добавлении заметки (клике на FloatingButton) -->
+    <string name="notification_title">Поздравляем!</string>
+    <string name="notification_description">Тут нельзя добавлять заметки!</string>
+
+    <!-- AdditionalActivity -->
+    <string name="open_additional_activity">Открыть вторую Activity</string>
+    <string name="additional_activity">Дополнительная Activity</string>
+    <string name="bottom_sheet_dialog_fragment">Bottom Sheet Dialog Fragment</string>
+    <string name="bottom_sheet_dialog_button_ok">Ok!</string>
+    <string name="bottom_sheet_dialog_button_yes">Yes!</string>
+    <string name="toast_press_ok">Нажата ОК</string>
+    <string name="toast_press_yes">Нажата YES</string>
     <!-- Прочие новые ресурсы -->
 
 </resources>

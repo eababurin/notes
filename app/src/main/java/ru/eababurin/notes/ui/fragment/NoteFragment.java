@@ -16,6 +16,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import ru.eababurin.notes.R;
 import ru.eababurin.notes.engine.Memo;
 
@@ -68,8 +70,8 @@ public class NoteFragment extends Fragment {
                 Toast.makeText(requireActivity(), R.string.toast_editing, Toast.LENGTH_LONG).show();
                 break;
             case R.id.action_remove:
-                Toast.makeText(requireActivity(), R.string.data_removed, Toast.LENGTH_LONG).show();
                 requireActivity().getSupportFragmentManager().popBackStack();
+                Snackbar.make(getActivity().findViewById(R.id.view_note_text_view), R.string.snackbar_remove_description, Snackbar.LENGTH_SHORT).show();
                 break;
             case R.id.action_information:
                 requireActivity().getSupportFragmentManager()

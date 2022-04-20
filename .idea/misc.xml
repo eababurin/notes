@@ -4,12 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/babur/Repositories/notes/app/src/main/res/layout-land/activity_main.xml" value="0.36486486486486486" />
+        <entry key="..\:/Users/babur/Repositories/notes/app/src/main/res/layout/activity_additional.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/babur/Repositories/notes/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/babur/Repositories/notes/app/src/main/res/layout/drawer_header.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/babur/Repositories/notes/app/src/main/res/layout/fragment_about.xml" value="0.35185185185185186" />
         <entry key="..\:/Users/babur/Repositories/notes/app/src/main/res/layout/fragment_about_note.xml" value="0.35185185185185186" />
+        <entry key="..\:/Users/babur/Repositories/notes/app/src/main/res/layout/fragment_exit_dialog.xml" value="0.21203703703703702" />
         <entry key="..\:/Users/babur/Repositories/notes/app/src/main/res/layout/fragment_list.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/babur/Repositories/notes/app/src/main/res/layout/fragment_list_of_notes.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/babur/Repositories/notes/app/src/main/res/layout/fragment_my_bottom_sheet_dialog.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/babur/Repositories/notes/app/src/main/res/layout/fragment_note.xml" value="0.215625" />
         <entry key="..\:/Users/babur/Repositories/notes/app/src/main/res/layout/fragment_settings.xml" value="0.35185185185185186" />
         <entry key="..\:/Users/babur/Repositories/notes/app/src/main/res/menu/context_menu.xml" value="0.1" />
